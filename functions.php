@@ -26,8 +26,8 @@ function web_insertar_style(){
   wp_enqueue_style('reset', getCSS('reset.css') );
   wp_enqueue_style('bootstrap', getCSS('bootstrap.min.css'));
   wp_enqueue_style('style', getCSS('style.css'));
-  wp_enqueue_style('google-fonts1', 'Roboto-Bold.ttf', array(), null);
-  wp_enqueue_style('google-fonts2', 'Roboto-Regular.ttf', array(), null);
+  wp_enqueue_style('google-fonts1', getFONTS('Roboto-Bold.ttf'), array(), null);
+  wp_enqueue_style('google-fonts2', getFONTS('Roboto-Regular.ttf'), array(), null);
 }
 add_action('wp_enqueue_scripts','web_insertar_style');
 

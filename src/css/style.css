@@ -76,9 +76,15 @@ a:hover {
     background-color: #7f7f7f;
 }
 
+.current_page_item a {
+    font-weight: bold;
+    color: #ffffff!important;
+    background-color: #7f7f7f;
+}
+
 .sub-menu {
     position: absolute;
-    background-color: orange;
+    background-color: rgba(198, 146, 63, 0.7);
     width: 200%;
     display: none;
 }
@@ -92,6 +98,7 @@ a:hover {
 
 .cabure-navegador-lista li:hover .sub-menu {
     display: block;
+    z-index: 2;
 }
 
 .sub-menu li a:hover {
@@ -146,6 +153,10 @@ a:hover {
 
 /* MISION, VISION, VALORES */
 
+#mvv {
+    padding-top: 50px;
+}
+
 .cabure-mision {
     margin-top: 30px;
 }
@@ -171,6 +182,10 @@ a:hover {
 
 
 /* HISTORIA */
+
+#historia {
+    padding-top: 50px;
+}
 
 .cabure-historia {
     background-color: #A6CE39;
@@ -203,6 +218,10 @@ a:hover {
 
 
 /* AUTORIDADES Y ESTATUTOS */
+
+#autoridadesYEstatutos {
+    padding-top: 50px;
+}
 
 .cabure-autoridades-estatutos {
     padding-top: 50px;
@@ -281,6 +300,85 @@ a:hover {
     text-transform: uppercase;
     border-bottom: 2px solid #0095d9;
 }
+
+
+/* CONTACT FORM RESERVAS */
+
+.cabure-reservas {
+    background-image: url('../img/tramacolumna_izq.jpg'), url('../img/tramacolumna_der.jpg');
+    background-repeat: no-repeat;
+    background-position: left, right;
+}
+
+.cabure-formulario {
+    padding: 30px;
+    margin: 70px 0px;
+    background-color: #E4E4E4;
+}
+
+.cabure-reservas-titulo {
+    padding-bottom: 30px;
+    font-size: 19.35pt;
+    line-height: 25px;
+    text-align: center;
+    color: #D65809;
+}
+
+.form .form-control::placeholder {
+    color: #333333;
+}
+
+.cabure-reservas-boton {
+    text-align: right;
+}
+
+.cabure-reservas-enviar {
+    padding: 10px 30px;
+    border: none;
+    background-color: #105F84;
+    color: white;
+    outline: none;
+    font-weight: bold;
+}
+
+.cabure_TextArea {
+    height: 150px;
+    resize: none;
+}
+
+
+/* CONTACT FORM AFILIATE */
+
+.cabure_descarga {
+    font-size: 19.35pt;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 50px;
+    background-color: #7BA114;
+    color: #ffffff;
+}
+
+.barras {
+    color: #99CF16;
+}
+
+
+/* .cabure-reservas-fondo1 {
+    text-align: left;
+}
+
+.cabure-reservas-fondo1 img {
+    max-width: 100%;
+}
+
+.cabure-reservas-fondo2 {
+    text-align: right;
+}
+
+.cabure-reservas-fondo2 img {
+    max-width: 100%;
+} */
 
 
 /* FOOTER */
@@ -374,5 +472,14 @@ a:hover {
     }
     .cabure-autoridades-titulo img {
         max-width: 27%;
+    }
+    /* FOOTER */
+    .cabure-footer-lista li {
+        text-align: center;
+        display: block;
+        border: 0px
+    }
+    .cabure-footer-lista-redes {
+        text-align: center;
     }
 }

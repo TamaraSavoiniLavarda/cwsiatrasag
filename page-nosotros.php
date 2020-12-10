@@ -12,7 +12,9 @@
     <!-- SLIDER -->
     <section class="cabure-slider">
       <div class="cabure-slider-img">
-        <img src="<?=getIMG('slide_nosotros.jpg')?>" alt="nosotros" />
+        <?php
+            echo do_shortcode('[smartslider3 slider="3"]');
+        ?>
       </div>
     </section>
     <!-- MISION, VISION, VALORES -->

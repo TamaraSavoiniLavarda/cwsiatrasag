@@ -4,7 +4,7 @@
     <section class="cabure-slider">
       <div class="cabure-slider-img">
         <?php
-            echo do_shortcode('[smartslider3 slider="5"]');
+            echo do_shortcode('[smartslider3 slider="6"]');
         ?>
       </div>
     </section>
