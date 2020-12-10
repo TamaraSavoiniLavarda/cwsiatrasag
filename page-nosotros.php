@@ -94,7 +94,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="cabure-autoridades-titulo">
-                        <img src="<?=getIMG('autoridades.png')?>" alt="autoridades">
+                        <div class="cabure-autoridades-absoluto">
+                            <img src="<?=getIMG('autoridades.png')?>" alt="autoridades">
+                        </div>
                     </div>
                     <div class="col-lg-4 cabure-autoridades">
                         <ul class="cabure-autoridades-lista">
@@ -146,5 +148,69 @@
             </div>
         </div>
     </section>
+
+<!-- <section class="cabure-autoridades-estatutos" id="autoridadesYEstatutos">
+        <div class="cabure-contenedor-chico__mod">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="row">
+                        <div class="cabure-autoridades-titulo">
+                            <img src="<?=getIMG('autoridades.png')?>" alt="autoridades">
+                        <div class="cabure-autoridades col-6">
+                            <ul class="cabure-autoridades-lista">
+                            <li><strong>Secretario General</strong></li>
+                            <li>Sergio Benitez</li>
+                            <li class="cabure-autoridades-item"><strong>Secretario Adjunto</strong></li>
+                            <li>Santiago Mackinnon</li>
+                            <li class="cabure-autoridades-item"><strong>Secretario Gremial</strong></li>
+                            <li >Gabriel Treppo</li>
+                            <li class="cabure-autoridades-item"><strong>Tesorero</strong></li>
+                            <li>Germán Penco</li>
+                            <li class="cabure-autoridades-item"><strong>Vocales titulares</strong></li>
+                            <li>Sebastian Abel Berthet</li>
+                            <li>Magdalena Mondolo</li>
+                            <li>Agustin Anolles</li>
+                            <li>Miguel Torres</li>
+                            <li class="cabure-autoridades-item"><strong>Suplentes</strong></li>
+                            <li>Claudio Marturet</li>
+                            <li>Anibal Cometti</li>
+                            <li>Juan Pablo Briand</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-5">
+                        <div class="cabure-estatutos">
+                            <div class="cabure-estatutos-titulo">
+                                <img src="<?=getIMG('estatutos.png')?>" alt="estatutos">
+                            </div>
+                            <div class="cabure-estatutos-contenido">
+                                <ul class="cabure-estatutos-lista">
+                                    <li class="cabure-estatutos-verde">01. 2da_acta_conocimiento_230207</li>
+                                    <li class="cabure-estatutos-azul">02. 13dejulio2008</li>
+                                    <li class="cabure-estatutos-verde">03. abrazo_enf_27022008</li>
+                                    <li class="cabure-estatutos-azul">04. acta27julio2007</li>
+                                    <li class="cabure-estatutos-verde">05. acta_conocimiento_230207</li>
+                                    <li class="cabure-estatutos-azul">06. analisisAICO</li>
+                                    <li class="cabure-estatutos-verde">07. aplazamientoforo</li>
+                                    <li class="cabure-estatutos-azul">08. asamblea_binacional_25022008</li>
+                                    <li class="cabure-estatutos-verde">09. asambleabin261010</li>
+                                    <li class="cabure-estatutos-azul">10. aute</li>
+                                </ul>
+                            </div>
+                            <div class="cabure-estatutos-verMas">
+                                <a href="#">ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
 </main>
 <?php get_footer(); ?>
