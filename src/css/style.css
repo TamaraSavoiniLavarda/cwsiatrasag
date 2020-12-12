@@ -274,6 +274,8 @@ a:hover {
 
 .cabure-autoridades-titulo {
     background-color: #F1F2F3;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .cabure-autoridades-titulo img {
@@ -282,12 +284,26 @@ a:hover {
     max-width: 80%;
 }
 
+.cabure-autoridades-titulo-txt {
+    text-align: center;
+    color: #C5C9CC;
+    font-size: 20pt;
+    display: none;
+}
+
+.cabure-autoridades-titulo-txt span {
+    color: #A6CE39;
+}
+
+.cabure-autoridades-lista li {
+    text-transform: uppercase;
+}
+
 .cabure-autoridades-lista {
     font-size: 16pt;
     color: #808285;
     margin-top: 40px;
     line-height: 25px;
-    text-transform: uppercase;
 }
 
 .cabure-autoridades-item {
@@ -308,6 +324,11 @@ a:hover {
 
 .cabure-estatutos-titulo img {
     max-width: 70%;
+}
+
+.cabure-estatutos-contenido {
+    max-height: 400px;
+    overflow-y: hidden;
 }
 
 .cabure-estatutos-contenido ul li {
@@ -337,12 +358,15 @@ a:hover {
     text-align: center;
 }
 
-.cabure-estatutos-verMas a {
+#verMasEstatutos {
     color: #0095d9;
     font-weight: bold;
     font-size: 17.5pt;
     text-transform: uppercase;
+    border: none;
+    background-color: unset;
     border-bottom: 2px solid #0095d9;
+    outline: none;
 }
 
 
@@ -473,6 +497,29 @@ a:hover {
 }
 
 
+/* SINGLE */
+
+.cabure-novedad-titulo-txt {
+    text-align: center;
+    color: #C5C9CC;
+    font-weight: bold;
+    font-size: 20pt;
+    /* display: none; */
+}
+
+.cabure-novedad-titulo-txt span {
+    color: #A6CE39;
+}
+
+.cabure-single-img {
+    text-align: center;
+}
+
+.cabure-single-img img {
+    max-width: 100%;
+}
+
+
 /* FOOTER */
 
 .cabure-footer {
@@ -568,15 +615,16 @@ a:hover {
         padding: 0px;
     }
     .cabure-autoridades-titulo {
-        transform: rotate(90deg);
+        /* transform: rotate(90deg);
         width: 100%;
-        background-size: 10px 20px;
+        background-size: 10px 20px; */
         /* background-color: unset; */
-        bottom: 0;
+        /* bottom: 0; */
+        display: none;
         /* position: relative; */
     }
-    .cabure-autoridades-titulo img {
-        max-width: 27%;
+    .cabure-autoridades-titulo-txt {
+        display: block;
     }
     /* FOOTER */
     .cabure-footer-lista li {
