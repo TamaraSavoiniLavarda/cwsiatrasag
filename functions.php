@@ -26,8 +26,9 @@ function web_insertar_style(){
   wp_enqueue_style('reset', getCSS('reset.css') );
   wp_enqueue_style('bootstrap', getCSS('bootstrap.min.css'));
   wp_enqueue_style('style', getCSS('style.css'));
-  wp_enqueue_style('google-fonts1', getFONTS('Roboto-Bold.ttf'), array(), null);
-  wp_enqueue_style('google-fonts2', getFONTS('Roboto-Regular.ttf'), array(), null);
+  // wp_enqueue_style('google-fonts1', getFONTS('Roboto-Bold.ttf'), array(), null);
+  // wp_enqueue_style('google-fonts2', getFONTS('Roboto-Regular.ttf'), array(), null);
+  wp_enqueue_style('font-one', "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap", false);
 }
 add_action('wp_enqueue_scripts','web_insertar_style');
 
@@ -79,6 +80,7 @@ register_nav_menus(array(
 function forzarCropEnDimensiones() {
   add_image_size('medium', get_option('medium_size_w'), get_option('medium_size_h'), true);
   add_image_size('img_novedades', 300, 250, true);
+  add_image_size('img_novedades1', 425, 270, true);
 }
 add_action('after_setup_theme','forzarCropEnDimensiones');
 
@@ -113,8 +115,60 @@ function wdCabureweb_widgets_init() {
   //   'before_title'  => '',
   //   'after_title'   => '',
   // ));
+  
+  register_sidebar( array(
+    'name'          => '[Nosotros] Estatutos',
+    'id'            => 'id-estatutos-contenido',
+    'description'   => 'Ingresar texto con listado',
+    'before_widget' => '<div class="hola">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h1 class="hola">',
+    'after_title'   => '</h1>',
+  ));
+
+  register_sidebar( array(
+    'name'          => '[Nosotros] Mision',
+    'id'            => 'id-mision-contenido',
+    'description'   => 'Ingresar texto',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '',
+  ));
+
+  register_sidebar( array(
+    'name'          => '[Nosotros] Vision',
+    'id'            => 'id-vision-contenido',
+    'description'   => 'Ingresar texto',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '',
+  ));
+
+  register_sidebar( array(
+    'name'          => '[Nosotros] Valores',
+    'id'            => 'id-valores-contenido',
+    'description'   => 'Ingresar texto',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '',
+  ));
+
+  
+  register_sidebar( array(
+    'name'          => '[Nosotros] Autoridades',
+    'id'            => 'id-autoridades-contenido',
+    'description'   => 'Ingresar lista.',
+    'before_widget' => '<ul class="cabure-autoridades-lista">',
+    'after_widget'  => '</ul>',
+    'before_title'  => '<strong>',
+    'after_title'   => '</strong>',
+  ));
+  
 } add_action( 'widgets_init', 'wdCabureweb_widgets_init' );
-/*
+  /*
   Agregando nuevas funcionalidades que tracienden de una configuracion general.
 */
 include 'inc/main.php';

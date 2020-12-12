@@ -19,10 +19,10 @@
                          <div class="cabure-reservas-titulo">
                             <p>Cargá aquí tus datos y a la brevedad te contactaremos </br> para hacerte llegar tu Carnet Digital de Afiliación!</p>
                         </div>
-                            <?= do_shortcode('[contact-form-7 id="119"]')?>
+                                <?= do_shortcode('[contact-form-7 id="142" title="Formulario de afiliate"]')?>
                     </div>
-                    <div class="text-center cabure_descarga">
-                        <span class="barras">/////</span> &nbsp; Descargá aqui el formulario de inscripción para afiliarte &nbsp; <span class="barras">/////</span>
+                    <div class="text-center cabure_descarga"></div>
+                        <a href="<?=home_url().'/PDF/formulario-afiliado.pdf';?>"><span class="barras">/////</span> &nbsp; Descargá aqui el formulario de inscripción para afiliarte &nbsp; <span class="barras">/////</span></a>
                     </div>
                 </div>
             </div>

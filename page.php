@@ -2,18 +2,24 @@
 
 <main>
     <?php
-    $tituloActual = wp_title('');
+    $tituloActual = get_the_title();
     $titulo = strtolower($tituloActual);
     switch ($titulo) {
         case 'nosotros':
-            get_template_part('page', 'nosotros.php');
+            get_template_part('parts/pag', 'nosotros');
+        break;
+        case 'contacto':
+            get_template_part('parts/pag', 'contacto');
             break;
-        // case 'contacto':
-        //     get_template_part('page', 'contacto.php');
-        //     break;
-        // case 'reservas':
-        //     get_template_part('page', 'reservas.php');
-        //     break;
+        case 'reservas':
+            get_template_part('parts/pag', 'reservas');
+            break;
+        case 'imagenes':
+            get_template_part('parts/pag', 'imagenes');
+            break;
+        case 'afiliate':
+            get_template_part('parts/pag', 'afiliate');
+            break;
         default:
             defaultPage($tituloActual);
             break;

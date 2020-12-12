@@ -32,19 +32,19 @@ function getHomeNovedades($query,$columna){
 	if ($query->have_posts()):
 		while($query->have_posts()): $query->the_post();
 			$postid = get_the_ID();
-			$image = get_the_post_thumbnail_url($postid,'img_novedades');
+			$image = get_the_post_thumbnail_url($postid,'img_novedades1');
 			$title = get_the_title();
 			$permalink = get_the_permalink();
 	?>
 	<div class="col-lg-<?=$columna?>">
     <div class=" text-center">
-      <div class="cabure-novedades-card-img">
+      <div class="cabure-novedades-home">
+        <div class="cabure-novedades-titulo">
+          <h4><?=$title;?></h4>
+        </div>
         <img src="<?=$image?>" alt="imagen destacada" />
       </div>
-      <div class="">
-        <h4><?=$title;?></h4>
-      </div>
-      <div class="cabure-novedades-card-verMas mt-3">
+      <div class="cabure-novedades-card-verMas">
         <h5><a href="<?=$permalink?>">Ver más</a></h5>
       </div>
     </div>

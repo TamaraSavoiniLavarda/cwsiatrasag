@@ -1,3 +1,17 @@
+/* @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+} */
+
 html {
     scroll-behavior: smooth;
 }
@@ -27,7 +41,7 @@ a:hover {
 /* REUTILIZABLE */
 
 .cabure-contenedor__mod {
-    max-width: 95%;
+    max-width: 90%;
     margin: auto;
 }
 
@@ -51,14 +65,16 @@ a:hover {
     font-size: 14.52pt;
     text-transform: uppercase;
     padding-top: 10px;
-    padding-bottom: 20px;
+}
+
+.cabure-navegador-lista {
+    margin-top: 10px;
 }
 
 .cabure-navegador-lista li {
     position: relative;
-    margin-right: 5%;
+    margin-right: 3%;
     display: inline-block;
-    margin-top: 10px;
 }
 
 .cabure-navegador-lista li:last-child {
@@ -66,32 +82,50 @@ a:hover {
 }
 
 .cabure-navegador-lista li a {
+    display: block;
     color: #0095d9;
-    padding: 7px 15px 21px 15px;
+    padding: 10px 20px;
+    padding-bottom: 30px;
+    /* padding: 7px 15px 20px 15px; */
 }
 
-.cabure-navegador-lista li a:hover {
+.cabure-navegador-lista li:hover>a {
     font-weight: bold;
     color: #ffffff;
     background-color: #7f7f7f;
 }
 
-.current_page_item a {
+.current_page_item {
+    background-color: #7f7f7f;
+    color: #0095d9;
+    position: relative;
+    /* padding: 7px 15px 21px 15px; */
+}
+
+.current_page_item>a {
     font-weight: bold;
     color: #ffffff!important;
-    background-color: #7f7f7f;
 }
 
 .sub-menu {
+    margin: 0;
+    padding: 0;
     position: absolute;
+    left: -40%;
+    right: auto;
     background-color: rgba(198, 146, 63, 0.7);
-    width: 200%;
+    /* width: 200%; */
     display: none;
+}
+
+.sub-menu li {
+    width: 100%;
+    display: block;
 }
 
 .sub-menu li a {
     display: block;
-    padding: 15px;
+    /* padding: 15px; */
     color: white;
     font-family: "Roboto";
 }
@@ -258,6 +292,7 @@ a:hover {
 
 .cabure-autoridades-item {
     margin-top: 20px;
+    font-weight: bold;
 }
 
 .cabure-estatutos {
@@ -275,18 +310,27 @@ a:hover {
     max-width: 70%;
 }
 
-.cabure-estatutos-lista li {
+.cabure-estatutos-contenido ul li {
     padding: 0px 15px;
     margin-bottom: 10px;
 }
 
-.cabure-estatutos-verde {
+.cabure-estatutos-contenido ul li:nth-child(odd) {
+    background-color: #A6CE39;
+}
+
+.cabure-estatutos-contenido ul li:nth-child(even) {
+    background-color: #0095D9;
+}
+
+
+/* .cabure-estatutos-verde {
     background-color: #A6CE39;
 }
 
 .cabure-estatutos-azul {
     background-color: #0095D9;
-}
+} */
 
 .cabure-estatutos-verMas {
     margin: 20px 0px;
@@ -302,7 +346,7 @@ a:hover {
 }
 
 
-/* CONTACT FORM RESERVAS */
+/* CONTACT FORM RESERVAS Y CONTACTO*/
 
 .cabure-reservas {
     background-image: url('../img/tramacolumna_izq.jpg'), url('../img/tramacolumna_der.jpg');
@@ -330,12 +374,38 @@ a:hover {
 
 .cabure-reservas-boton {
     text-align: right;
+    position: relative;
 }
 
+.cabure-reservas-boton::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    right: 130px;
+    bottom: 12px;
+    background-image: url('../img/msg.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    z-index: 10;
+}
+
+
+/* .cabure-boton-relative {
+    position: relative;
+}
+
+.cabure-boton-absolute {
+    position: absolute;
+    right: 130px;
+    bottom: 10px;
+} */
+
 .cabure-reservas-enviar {
-    padding: 10px 30px;
+    padding: 10px 40px 10px 60px;
     border: none;
-    background-color: #105F84;
+    background-color: #0078A2;
     color: white;
     outline: none;
     font-weight: bold;
@@ -364,21 +434,43 @@ a:hover {
 }
 
 
-/* .cabure-reservas-fondo1 {
-    text-align: left;
+/* NOVEDADES */
+
+.cabure-novedades-home {
+    position: relative;
 }
 
-.cabure-reservas-fondo1 img {
-    max-width: 100%;
+.cabure-novedades-titulo {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    right: 250px;
+    /* left: 300px; */
+    color: #ffffff;
 }
 
-.cabure-reservas-fondo2 {
-    text-align: right;
+
+/* IMAGENES */
+
+.cabure_galeria1 {
+    background-color: #0095D9;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20pt;
+    margin-bottom: 15px;
 }
 
-.cabure-reservas-fondo2 img {
-    max-width: 100%;
-} */
+.cabure_galeria2 {
+    background-color: #A6CE39;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20pt;
+    margin-bottom: 15px;
+}
 
 
 /* FOOTER */
@@ -459,8 +551,21 @@ a:hover {
         background-color: unset;
         color: #0095d9;
     }
-    .sub-menu li {
-        display: none;
+    .sub-menu {
+        background-color: rgba(198, 146, 63);
+        left: 0;
+        right: 0;
+        display: block;
+        max-width: 100%;
+        position: relative;
+    }
+    .current_page_item {
+        font-weight: bold;
+        color: #ffffff!important;
+        background-color: #7f7f7f;
+    }
+    .cabure-navegador-lista li a {
+        padding: 0px;
     }
     .cabure-autoridades-titulo {
         transform: rotate(90deg);

@@ -4,7 +4,7 @@
     <section class="cabure-slider">
       <div class="cabure-slider-img">
         <?php
-            echo do_shortcode('[smartslider3 slider="3"]');
+            echo do_shortcode('[smartslider3 slider="5"]');
         ?>
       </div>
     </section>
@@ -16,11 +16,7 @@
                 </div>
                 <div class="col-lg-8">
                     <div class="cabure-formulario">
-                         <div class="cabure-reservas-titulo">
-                            <p>Realizá aquí la pre-reserva del Salón ó Quincho de SIATRASAG.</p>
-                            <p><strong>Enviaremos confirmación digital vía Whatsapp</strong></p>
-                        </div>
-                            <?= do_shortcode('[contact-form-7 id="43"]')?>
+                        <?= do_shortcode('[contact-form-7 id="144" title="Formulario de contacto"]')?>                            
                     </div>
                 </div>
             </div>
