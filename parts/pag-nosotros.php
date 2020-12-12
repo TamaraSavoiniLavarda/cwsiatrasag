@@ -13,7 +13,8 @@
     <section class="cabure-slider">
       <div class="cabure-slider-img">
         <?php
-            echo do_shortcode('[smartslider3 slider="3"]');
+            echo do_shortcode('[smartslider3 slider="4"]');
+            
         ?>
       </div>
     </section>
@@ -105,11 +106,14 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="cabure-autoridades-titulo">
-                        <div class="cabure-autoridades-absoluto">
+                        <!-- <div class="cabure-autoridades-absoluto"> -->
                             <img src="<?=getIMG('autoridades.png')?>" alt="autoridades">
-                        </div>
+                        <!-- </div> -->
                     </div>
                     <div class="col-lg-4 cabure-autoridades">
+                        <div class="cabure-autoridades-titulo-txt">
+                            ///<span> Autoridades </span>///
+                        </div>
                     <?php
                         dynamic_sidebar('id-autoridades-contenido');
                         
@@ -140,7 +144,7 @@
                             <div class="cabure-estatutos-titulo">
                                 <img src="<?=getIMG('estatutos.png')?>" alt="estatutos">
                             </div>
-                            <div class="cabure-estatutos-contenido" style="max-height:120px; overflow-y:hidden">
+                            <div class="cabure-estatutos-contenido">
                                 <?php dynamic_sidebar('id-estatutos-contenido'); ?>
                                 <!-- <ul class="cabure-estatutos-lista">
                                     <li class="cabure-estatutos-verde">01. 2da_acta_conocimiento_230207</li>
@@ -169,7 +173,7 @@
                                 </ul> -->
                             </div>
                             <div class="cabure-estatutos-verMas">
-                                <a href="#">ver más</a><!-- cambiar el height -->
+                                <button id="verMasEstatutos">ver más</button>
                             </div>  
                         </div>
                     </div>

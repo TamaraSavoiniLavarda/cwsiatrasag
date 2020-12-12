@@ -1,12 +1,12 @@
-<?php get_header();?>
+<?php get_header(); ?>
 <main>
     <!-- SLIDER -->
     <section class="cabure-slider">
-      <div class="cabure-slider-img">
-        <?php
+        <div class="cabure-slider-img">
+            <?php
             echo do_shortcode('[smartslider3 slider="5"]');
-        ?>
-      </div>
+            ?>
+        </div>
     </section>
     <!-- CONTACT FORM -->
     <section class="cabure-reservas">
@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-lg-8">
                     <div class="cabure-formulario">
-                        <?= do_shortcode('[contact-form-7 id="144" title="Formulario de contacto"]')?>                            
+                        <?= do_shortcode('[contact-form-7 id="50" title="Formulario de contacto"]') ?>
                     </div>
                 </div>
             </div>

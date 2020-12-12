@@ -11,7 +11,7 @@
     <header>
       <!-- BANNER -->
       <section class="cabure-banner">
-        <img src="<?= getIMG('banner_encabezado.jpg');?>" alt="banner" />
+        <img src="<?= getIMG('banner-siatrasag.jpg');?>" alt="banner" />
       </section>
       <!-- NAVEGADOR -->
 
