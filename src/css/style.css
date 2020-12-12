@@ -184,6 +184,10 @@ a:hover {
     color: black;
 }
 
+.cabure-novedades-cards {
+    margin-top: 50px;
+}
+
 
 /* MISION, VISION, VALORES */
 
@@ -460,7 +464,8 @@ a:hover {
 
 /* NOVEDADES */
 
-.cabure-novedades-home {
+
+/*.cabure-novedades-home {
     position: relative;
 }
 
@@ -470,9 +475,60 @@ a:hover {
     height: 50px;
     position: absolute;
     bottom: 0px;
-    right: 250px;
-    /* left: 300px; */
+    right: 250px;*/
+
+
+/* left: 300px; */
+
+
+/*
+color: #ffffff;
+
+} */
+
+.cabure-home-img {
+    margin: 0px 20px;
+    position: relative;
+}
+
+.cabure-home-img img {
+    max-width: 100%;
+}
+
+.cabure-home-titulo {
+    padding: 10px 0px;
     color: #ffffff;
+    font-size: 19pt;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cabure-home-lista li {
+    display: inline-block;
+    text-align: left;
+}
+
+.cabure-home-lista li:last-child {
+    text-align: right;
+}
+
+.cabure-home-autor {
+    font-size: 15pt;
+    font-weight: bold;
+    color: #666666;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.cabure-home-contenido {
+    font-size: 15pt;
+    color: #666666;
+    margin-top: 20px;
+    text-align: center;
 }
 
 

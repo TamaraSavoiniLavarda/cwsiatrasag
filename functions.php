@@ -80,7 +80,7 @@ register_nav_menus(array(
 function forzarCropEnDimensiones() {
   add_image_size('medium', get_option('medium_size_w'), get_option('medium_size_h'), true);
   add_image_size('img_novedades', 300, 250, true);
-  add_image_size('img_novedades1', 425, 270, true);
+  add_image_size('img_novedades1', 700, 400, true);
 }
 add_action('after_setup_theme','forzarCropEnDimensiones');
 
@@ -207,23 +207,46 @@ function getHomeNovedades($query, $columna)
   if ($query->have_posts()) :
     while ($query->have_posts()) : $query->the_post();
       $postid = get_the_ID();
-      $image = get_the_post_thumbnail_url($postid, 'img_novedades1');
+      $image = get_the_post_thumbnail_url();
       $title = get_the_title();
       $permalink = get_the_permalink();
+      $contenido = get_the_content();
+      $d = get_the_date('d');
+      $m = get_the_date('F');
+      $a = get_the_date('Y');
+      $fecha = $d . ' ' . 'de' . ' ' . $m . ' ' . 'de' . ' '. $a;
     ?>
-      <div class="col-lg-<?= $columna ?>">
-        <div class=" text-center">
-          <div class="cabure-novedades-home">
-            <div class="cabure-novedades-titulo">
-              <h4><?= $title; ?></h4>
+      <div class="col-lg-<?= $columna ?> mb-5">
+        <!-- <div class=" text-center"> -->
+          <!-- <div class="cabure-home-relative"> -->
+            <div class="cabure-home-img">
+              <img src="<?=$image?>" alt="novedad">
+              <div class="cabure-home-titulo">
+                <?=$title?>
+              </div>
             </div>
-            <img src="<?= $image ?>" alt="imagen destacada" />
-          </div>
-          <div class="cabure-novedades-card-verMas">
-            <h5><a href="<?= $permalink ?>">Ver más</a></h5>
-          </div>
-        </div>
+            <div class="cabure-home-autor">
+              <div>
+                <img src="<?=getIMG('foto_perfil_novedades.png')?>" alt=""><span>por Siatrasag</span>
+              </div>
+              <div style="text-align:right">
+                  <?=$fecha?>
+              </div>
+            </div>
+            <!-- <div class="prueba-display">
+              <div>
+                <img src="<?=getIMG('foto_perfil_novedades.png')?>" alt="">por Siatrasag
+              </div>
+              <div class="derecha text-right">
+                <?=$fecha?>
+              </div>
+            </div> -->
+            
+            <div class="cabure-home-contenido">
+              <?=$contenido?>
+            </div>
       </div>
+          
     <?php endwhile;
   else : ?>
     <div class="col-lg-<?= $columna ?> mx-auto">

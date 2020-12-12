@@ -8,7 +8,7 @@
       ?>
     </div>
   </section>
-  <section class="cabure-novedades-cards mb-5">
+  <section class="cabure-novedades-cards cabure-contenedor__mod">
     <div class="container-fluid">
       <div class="row">
         <?php
