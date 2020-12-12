@@ -28,10 +28,24 @@
                 Obtenemos el menu definido en functions.php y agregamos una clase padre.
                 https://developer.wordpress.org/reference/functions/wp_nav_menu/
               */
+              
+              $activeNosotros = (is_page('nosotros'))? 'class="current_page_item"': '';
+              $activeInicio = (is_page('inicio'))? 'class="current_page_item"': '';
+
+              $urlNosotros = home_url().'/nosotros';
+              $menu_li = ' <li '.$activeInicio.'><a href="'.home_url().'">Inicio</a></li> 
+                           <li '.$activeNosotros.'><a href="'.$urlNosotros.'">Nosotros</a>
+                              <ul class="sub-menu">
+                                <li><a href="'.$urlNosotros.'/#mvv">MISION,VISION,VALORES</a></li>
+                                <li><a href="'.$urlNosotros.'/#historia">HISTORIA</a></li>
+                                <li><a href="'.$urlNosotros.'/#autoridadesYEstatutos">ESTATUTOS</a></li>
+                                <li><a href="'.$urlNosotros.'/#autoridadesYEstatutos">COMISION DIRECTIVA</a></li>
+                              </ul> </li>';
               wp_nav_menu(
                 array(
                   'theme_location'=> 'menu_principal',
-                  'menu_class' => 'cabure-navegador-lista')
+                  'menu_class' => 'cabure-navegador-lista',
+                  'items_wrap' => '<ul id="%1$s" class="%2$s">'.$menu_li.'%3$s</ul>')
                 );
               ?>
             </div>

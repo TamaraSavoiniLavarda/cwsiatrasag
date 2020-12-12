@@ -12,7 +12,10 @@
     <!-- SLIDER -->
     <section class="cabure-slider">
       <div class="cabure-slider-img">
-        <img src="<?= getIMG('sliderRecortado.jpg');?>" alt="bienvenidos" />
+        <!-- <img src=" getIMG('sliderRecortado.jpg');" alt="bienvenidos" /> -->
+        <?php
+          echo do_shortcode('[smartslider3 slider="2"]');
+        ?>
       </div>
     </section>
     <!-- TITULO NOVEDADES -->

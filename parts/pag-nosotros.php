@@ -12,7 +12,9 @@
     <!-- SLIDER -->
     <section class="cabure-slider">
       <div class="cabure-slider-img">
-        <img src="<?=getIMG('slide_nosotros.jpg')?>" alt="nosotros" />
+        <?php
+            echo do_shortcode('[smartslider3 slider="3"]');
+        ?>
       </div>
     </section>
     <!-- MISION, VISION, VALORES -->
@@ -24,23 +26,32 @@
                         <img src="<?=getIMG('mision.jpg')?>" alt="mision">
                     </div>
                     <div class="cabure-mision-contenido">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, vitae.
+                        <?php
+                        dynamic_sidebar('id-mision-contenido');
+                        
+                        ?>
                     </div>
                 </div>
                 <div class="col-lg-4 cabure-mision-card">
                     <div class="cabure-mision-titulo">
-                        <img src="<?=getIMG('vision.jpg')?>" alt="mision">
+                        <img src="<?=getIMG('vision.jpg')?>" alt="vision">
                     </div>
                     <div class="cabure-mision-contenido">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto suscipit, natus fugiat nostrum, tempore provident eligendi aliquid autem mollitia, deserunt esse! Dignissimos soluta ea, magnam ipsa odit laboriosam vero placeat officia, unde, labore sequi? Blanditiis quam natus harum ab facere, reprehenderit debitis? Aliquam, ipsa cupiditate! Assumenda temporibus vitae perspiciatis maiores?
+                        <?php
+                        dynamic_sidebar('id-vision-contenido');
+                        
+                        ?>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="cabure-mision-titulo">
-                        <img src="<?=getIMG('valores.jpg')?>" alt="mision">
+                        <img src="<?=getIMG('valores.jpg')?>" alt="valores">
                     </div>
                     <div class="cabure-mision-contenido">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto suscipit, natus fugiat nostrum, tempore provident eligendi aliquid autem mollitia, deserunt esse! Dignissimos soluta ea, magnam ipsa odit laboriosam vero placeat officia, unde, labore sequi? Blanditiis quam natus harum ab facere, reprehenderit debitis? Aliquam, ipsa cupiditate! Assumenda temporibus vitae perspiciatis maiores?
+                        <?php
+                        dynamic_sidebar('id-valores-contenido');
+                        
+                        ?>
                     </div>
                 </div>
             </div>
@@ -99,7 +110,11 @@
                         </div>
                     </div>
                     <div class="col-lg-4 cabure-autoridades">
-                        <ul class="cabure-autoridades-lista">
+                    <?php
+                        dynamic_sidebar('id-autoridades-contenido');
+                        
+                        ?>
+                        <!-- <ul class="cabure-autoridades-lista">
                             <li><strong>Secretario General</strong></li>
                             <li>Sergio Benitez</li>
                             <li class="cabure-autoridades-item"><strong>Secretario Adjunto</strong></li>
@@ -117,7 +132,7 @@
                             <li>Claudio Marturet</li>
                             <li>Anibal Cometti</li>
                             <li>Juan Pablo Briand</li>
-                        </ul>
+                        </ul> -->
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-lg-5">
@@ -125,8 +140,9 @@
                             <div class="cabure-estatutos-titulo">
                                 <img src="<?=getIMG('estatutos.png')?>" alt="estatutos">
                             </div>
-                            <div class="cabure-estatutos-contenido">
-                                <ul class="cabure-estatutos-lista">
+                            <div class="cabure-estatutos-contenido" style="max-height:120px; overflow-y:hidden">
+                                <?php dynamic_sidebar('id-estatutos-contenido'); ?>
+                                <!-- <ul class="cabure-estatutos-lista">
                                     <li class="cabure-estatutos-verde">01. 2da_acta_conocimiento_230207</li>
                                     <li class="cabure-estatutos-azul">02. 13dejulio2008</li>
                                     <li class="cabure-estatutos-verde">03. abrazo_enf_27022008</li>
@@ -137,11 +153,24 @@
                                     <li class="cabure-estatutos-azul">08. asamblea_binacional_25022008</li>
                                     <li class="cabure-estatutos-verde">09. asambleabin261010</li>
                                     <li class="cabure-estatutos-azul">10. aute</li>
-                                </ul>
+                                    
+
+01. 2da_acta_conocimiento_230207
+02. 13dejulio2008
+03. abrazo_enf_27022008
+04. acta27julio2007
+05. acta_conocimiento_230207
+06. analisisAICO
+07. aplazamientoforo
+08. asamblea_binacional_25022008
+09. asambleabin261010
+10. aute
+
+                                </ul> -->
                             </div>
                             <div class="cabure-estatutos-verMas">
-                                <a href="#">ver más</a>
-                            </div>
+                                <a href="#">ver más</a><!-- cambiar el height -->
+                            </div>  
                         </div>
                     </div>
                 </div>
@@ -149,67 +178,6 @@
         </div>
     </section>
 
-<!-- <section class="cabure-autoridades-estatutos" id="autoridadesYEstatutos">
-        <div class="cabure-contenedor-chico__mod">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="row">
-                        <div class="cabure-autoridades-titulo">
-                            <img src="<?=getIMG('autoridades.png')?>" alt="autoridades">
-                        <div class="cabure-autoridades col-6">
-                            <ul class="cabure-autoridades-lista">
-                            <li><strong>Secretario General</strong></li>
-                            <li>Sergio Benitez</li>
-                            <li class="cabure-autoridades-item"><strong>Secretario Adjunto</strong></li>
-                            <li>Santiago Mackinnon</li>
-                            <li class="cabure-autoridades-item"><strong>Secretario Gremial</strong></li>
-                            <li >Gabriel Treppo</li>
-                            <li class="cabure-autoridades-item"><strong>Tesorero</strong></li>
-                            <li>Germán Penco</li>
-                            <li class="cabure-autoridades-item"><strong>Vocales titulares</strong></li>
-                            <li>Sebastian Abel Berthet</li>
-                            <li>Magdalena Mondolo</li>
-                            <li>Agustin Anolles</li>
-                            <li>Miguel Torres</li>
-                            <li class="cabure-autoridades-item"><strong>Suplentes</strong></li>
-                            <li>Claudio Marturet</li>
-                            <li>Anibal Cometti</li>
-                            <li>Juan Pablo Briand</li>
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-                    
-                    
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <div class="cabure-estatutos">
-                            <div class="cabure-estatutos-titulo">
-                                <img src="<?=getIMG('estatutos.png')?>" alt="estatutos">
-                            </div>
-                            <div class="cabure-estatutos-contenido">
-                                <ul class="cabure-estatutos-lista">
-                                    <li class="cabure-estatutos-verde">01. 2da_acta_conocimiento_230207</li>
-                                    <li class="cabure-estatutos-azul">02. 13dejulio2008</li>
-                                    <li class="cabure-estatutos-verde">03. abrazo_enf_27022008</li>
-                                    <li class="cabure-estatutos-azul">04. acta27julio2007</li>
-                                    <li class="cabure-estatutos-verde">05. acta_conocimiento_230207</li>
-                                    <li class="cabure-estatutos-azul">06. analisisAICO</li>
-                                    <li class="cabure-estatutos-verde">07. aplazamientoforo</li>
-                                    <li class="cabure-estatutos-azul">08. asamblea_binacional_25022008</li>
-                                    <li class="cabure-estatutos-verde">09. asambleabin261010</li>
-                                    <li class="cabure-estatutos-azul">10. aute</li>
-                                </ul>
-                            </div>
-                            <div class="cabure-estatutos-verMas">
-                                <a href="#">ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
 
 </main>
