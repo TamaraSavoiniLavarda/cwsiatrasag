@@ -8,14 +8,14 @@
                 <li>Vélez Sarsfield 420</li>
                 <li>Concordia</li>
                 <li>Tel. (0345) 421 8210</li>
-                <li>siatrasag@gmail.com</li>
+                <li><a href="mailto:siatrasag@gmail.com">siatrasag@gmail.com</a></li>
               </ul>
             </div>
             <div class="col-lg-3">
               <ul class="cabure-footer-lista-redes">
                 <li><img src="<?= getIMG('seguinos-1.png');?>" alt="seguinos" class="cabure-seguinos"></li>
-                <li><img src="<?= getIMG('instagram-footer-1.png');?>" alt="instagram"></li>
-                <li><img src="<?= getIMG('facebook-footer-1.png');?>" alt="facebook"></li>
+                <li><a href="#"><img src="<?= getIMG('instagram-footer-1.png');?>" alt="instagram"></a></li>
+                <li><a href="#"><img src="<?= getIMG('facebook-footer-1.png');?>" alt="facebook"></a></li>
               </ul>
             </div>
           </div>

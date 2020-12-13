@@ -21,8 +21,10 @@
                         </div>
                         <?= do_shortcode('[contact-form-7 id="5" title="Contact form 1"]') ?>
                     </div>
-                    <div class="text-center cabure_descarga"></div>
-                    <a href="<?= home_url() . '/PDF/formulario-afiliado.pdf'; ?>"><span class="barras">/////</span> &nbsp; Descargá aqui el formulario de inscripción para afiliarte &nbsp; <span class="barras">/////</span></a>
+                    <div class="text-center cabure_descarga">
+                        <a href="<?= home_url() . '/PDF/formulario-afiliado.pdf'; ?>"><span class="barras">/////</span> &nbsp; Descargá aqui el formulario de inscripción para afiliarte &nbsp; <span class="barras">/////</span></a>
+                    </div>
+                    
                 </div>
             </div>
         </div>
