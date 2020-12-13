@@ -18,6 +18,11 @@
         )), '6');
         ?>
       </div>
+      <div class="col-lg-12 cabure-home-verMas">
+        <button class="cabure-home-verMas-btn">
+          + + + + + <span>&nbsp;&nbsp;Ver más novedades&nbsp;&nbsp;</span> + + + + +
+        </button>
+      </div>
     </div>
   </section>
 </main>

@@ -160,9 +160,69 @@ function wdCabureweb_widgets_init() {
   register_sidebar( array(
     'name'          => '[Nosotros] Autoridades',
     'id'            => 'id-autoridades-contenido',
-    'description'   => 'Ingresar lista.',
+    'description'   => 'Ingresar lista con los cargos en negrita.',
     'before_widget' => '<ul class="cabure-autoridades-lista">',
     'after_widget'  => '</ul>',
+    'before_title'  => '',
+    'after_title'   => '',
+  ));
+
+  register_sidebar( array(
+    'name'          => '[Nosotros] Historia párrafo 1',
+    'id'            => 'id-historia-parrafo-1',
+    'description'   => 'Ingresar texto del parrafo 1.',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '',
+  ));
+
+  register_sidebar( array(
+    'name'          => '[Nosotros] Historia párrafo 2',
+    'id'            => 'id-historia-parrafo-2',
+    'description'   => 'Ingresar texto del parrafo 2.',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '',
+  ));
+
+  register_sidebar( array(
+    'name'          => '[Nosotros] Historia párrafo 3',
+    'id'            => 'id-historia-parrafo-3',
+    'description'   => 'Ingresar texto del parrafo 3.',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '',
+  ));
+
+  register_sidebar( array(
+    'name'          => '[Nosotros] Historia párrafo 4',
+    'id'            => 'id-historia-parrafo-4',
+    'description'   => 'Ingresar texto del parrafo 4.',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '',
+  ));
+
+  register_sidebar( array(
+    'name'          => '[Nosotros] Historia imagen 1',
+    'id'            => 'id-historia-imagen-1',
+    'description'   => 'Ingresar imagen.',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '',
+  ));
+
+  register_sidebar( array(
+    'name'          => '[Nosotros] Historia imagen 2',
+    'id'            => 'id-historia-imagen-2',
+    'description'   => 'Ingresar imagen.',
+    'before_widget' => '',
+    'after_widget'  => '',
     'before_title'  => '',
     'after_title'   => '',
   ));
@@ -209,44 +269,36 @@ function getHomeNovedades($query, $columna)
       $postid = get_the_ID();
       $image = get_the_post_thumbnail_url();
       $title = get_the_title();
+      $excerpt = get_the_excerpt();
       $permalink = get_the_permalink();
-      $contenido = get_the_content();
       $d = get_the_date('d');
       $m = get_the_date('F');
       $a = get_the_date('Y');
       $fecha = $d . ' ' . 'de' . ' ' . $m . ' ' . 'de' . ' '. $a;
     ?>
-      <div class="col-lg-<?= $columna ?> mb-5">
-        <!-- <div class=" text-center"> -->
-          <!-- <div class="cabure-home-relative"> -->
-            <div class="cabure-home-img">
-              <img src="<?=$image?>" alt="novedad">
-              <div class="cabure-home-titulo">
-                <?=$title?>
-              </div>
+    <div class="col-lg-<?= $columna ?> mb-5">
+      <div class="cabure-home-card">
+        <a href="<?=$permalink?>">
+          <div class="cabure-home-img">
+            <img src="<?=$image?>" alt="novedad">
+            <div class="cabure-home-titulo">
+              <?=$title?>
             </div>
-            <div class="cabure-home-autor">
-              <div>
-                <img src="<?=getIMG('foto_perfil_novedades.png')?>" alt=""><span>por Siatrasag</span>
-              </div>
-              <div style="text-align:right">
-                  <?=$fecha?>
-              </div>
+          </div>
+          <div class="cabure-home-autor">
+            <img src="<?=getIMG('foto_perfil_novedades.png')?>" alt="">
+            <span> por Siatrasag</span>
+            <div class="cabure-home-absolute">
+              <?=$fecha?>
             </div>
-            <!-- <div class="prueba-display">
-              <div>
-                <img src="<?=getIMG('foto_perfil_novedades.png')?>" alt="">por Siatrasag
-              </div>
-              <div class="derecha text-right">
-                <?=$fecha?>
-              </div>
-            </div> -->
-            
-            <div class="cabure-home-contenido">
-              <?=$contenido?>
-            </div>
+          </div>
+          <div class="cabure-home-contenido">
+            <?=$excerpt?>
+          </div>
+        </a>
       </div>
-          
+    </div>
+      
     <?php endwhile;
   else : ?>
     <div class="col-lg-<?= $columna ?> mx-auto">
