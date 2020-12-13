@@ -8,7 +8,7 @@
       ?>
     </div>
   </section>
-  <section class="cabure-novedades-cards mb-5">
+  <section class="cabure-novedades-cards cabure-contenedor__mod">
     <div class="container-fluid">
       <div class="row">
         <?php
@@ -17,6 +17,11 @@
           'posts_per_page' => 2,
         )), '6');
         ?>
+      </div>
+      <div class="col-lg-12 cabure-home-verMas">
+        <button class="cabure-home-verMas-btn">
+          + + + + + <span>&nbsp;&nbsp;Ver más novedades&nbsp;&nbsp;</span> + + + + +
+        </button>
       </div>
     </div>
   </section>
