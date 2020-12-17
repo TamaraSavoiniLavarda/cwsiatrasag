@@ -116,14 +116,14 @@
         </div> -->
     </section>
     <!-- AUTORIDADES Y ESTATUTOS -->
-    <section class="cabure-autoridades-estatutos" id="autoridadesYEstatutos">
+    <section class="cabure-autoridades-estatutos">
         <div class="cabure-contenedor-chico__mod">
             <div class="container-fluid">
                 <div class="row">
                     <div class="cabure-autoridades-titulo">
                         <img src="<?=getIMG('autoridades.png')?>" alt="autoridades">
                     </div>
-                    <div class="col-lg-4 cabure-autoridades">
+                    <div class="col-lg-4 cabure-autoridades" id="autoridades">
                         <div class="cabure-autoridades-titulo-txt">
                             ///<span> Autoridades </span>///
                         </div>
@@ -134,7 +134,7 @@
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-lg-5">
-                        <div class="cabure-estatutos">
+                        <div class="cabure-estatutos" id="estatutos">
                             <div class="cabure-estatutos-titulo">
                                 <img src="<?=getIMG('estatutos.png')?>" alt="estatutos">
                             </div>
