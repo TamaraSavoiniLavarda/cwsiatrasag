@@ -15,6 +15,7 @@ get_header();
       <?= do_shortcode('[smartslider3 slider="2"]'); ?>
     </div>
   </section>
+	<?php if(false):?>
   <!-- TITULO NOVEDADES -->
   <section class="cabure-novedades text-center">
     <div class="cabure-novedades-img">
@@ -34,5 +35,8 @@ get_header();
       </div>
     </div>
   </section>
+	<?php else: ?>
+	<?php  echo do_shortcode('[instagram-feed num=4 cols=4]');?>
+	<?php endif;?>
 </main>
 <?php get_footer(); ?>
