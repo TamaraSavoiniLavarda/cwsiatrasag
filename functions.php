@@ -80,7 +80,7 @@ register_nav_menus(array(
 function forzarCropEnDimensiones() {
   add_image_size('medium', get_option('medium_size_w'), get_option('medium_size_h'), true);
   add_image_size('img_novedades', 300, 250, true);
-  add_image_size('img_novedades1', 700, 400, true);
+  // add_image_size('img_home_novedades', 700, 400, true);
 }
 add_action('after_setup_theme','forzarCropEnDimensiones');
 
@@ -132,8 +132,8 @@ function wdCabureweb_widgets_init() {
     'description'   => 'Ingresar texto',
     'before_widget' => '',
     'after_widget'  => '',
-    'before_title'  => '',
-    'after_title'   => '',
+    'before_title'  => '<strong>',
+    'after_title'   => '</strong>',
   ));
 
   register_sidebar( array(
@@ -142,8 +142,8 @@ function wdCabureweb_widgets_init() {
     'description'   => 'Ingresar texto',
     'before_widget' => '',
     'after_widget'  => '',
-    'before_title'  => '',
-    'after_title'   => '',
+    'before_title'  => '<strong>',
+    'after_title'   => '</strong>',
   ));
 
   register_sidebar( array(
@@ -152,8 +152,8 @@ function wdCabureweb_widgets_init() {
     'description'   => 'Ingresar texto',
     'before_widget' => '',
     'after_widget'  => '',
-    'before_title'  => '',
-    'after_title'   => '',
+    'before_title'  => '<strong>',
+    'after_title'   => '</strong>',
   ));
 
   

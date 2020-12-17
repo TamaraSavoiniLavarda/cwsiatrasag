@@ -38,8 +38,8 @@
                               <ul class="sub-menu">
                                 <li><a href="'.$urlNosotros.'/#mvv">MISION,VISION,VALORES</a></li>
                                 <li><a href="'.$urlNosotros.'/#historia">HISTORIA</a></li>
-                                <li><a href="'.$urlNosotros.'/#autoridadesYEstatutos">ESTATUTOS</a></li>
-                                <li><a href="'.$urlNosotros.'/#autoridadesYEstatutos">COMISION DIRECTIVA</a></li>
+                                <li><a href="'.$urlNosotros.'/#estatutos">ESTATUTOS</a></li>
+                                <li><a href="'.$urlNosotros.'/#autoridades">COMISION DIRECTIVA</a></li>
                               </ul> </li>';
               wp_nav_menu(
                 array(
